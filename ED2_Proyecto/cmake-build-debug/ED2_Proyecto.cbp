@@ -80,9 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/ultim/CLionProjects/ED2_Proyecto/Avl.cpp">
-			<Option target="ED2_Proyecto"/>
-		</Unit>
 		<Unit filename="C:/Users/ultim/CLionProjects/ED2_Proyecto/Avl.h">
 			<Option target="ED2_Proyecto"/>
 		</Unit>
@@ -96,9 +93,6 @@
 			<Option target="ED2_Proyecto"/>
 		</Unit>
 		<Unit filename="C:/Users/ultim/CLionProjects/ED2_Proyecto/ManejarAvl.h">
-			<Option target="ED2_Proyecto"/>
-		</Unit>
-		<Unit filename="C:/Users/ultim/CLionProjects/ED2_Proyecto/RegistroRepetidos.cpp">
 			<Option target="ED2_Proyecto"/>
 		</Unit>
 		<Unit filename="C:/Users/ultim/CLionProjects/ED2_Proyecto/RegistroRepetidos.h">

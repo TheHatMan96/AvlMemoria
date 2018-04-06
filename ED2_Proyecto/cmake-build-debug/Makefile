@@ -122,33 +122,6 @@ ED2_Proyecto/fast:
 	$(MAKE) -f CMakeFiles\ED2_Proyecto.dir\build.make CMakeFiles/ED2_Proyecto.dir/build
 .PHONY : ED2_Proyecto/fast
 
-Avl.obj: Avl.cpp.obj
-
-.PHONY : Avl.obj
-
-# target to build an object file
-Avl.cpp.obj:
-	$(MAKE) -f CMakeFiles\ED2_Proyecto.dir\build.make CMakeFiles/ED2_Proyecto.dir/Avl.cpp.obj
-.PHONY : Avl.cpp.obj
-
-Avl.i: Avl.cpp.i
-
-.PHONY : Avl.i
-
-# target to preprocess a source file
-Avl.cpp.i:
-	$(MAKE) -f CMakeFiles\ED2_Proyecto.dir\build.make CMakeFiles/ED2_Proyecto.dir/Avl.cpp.i
-.PHONY : Avl.cpp.i
-
-Avl.s: Avl.cpp.s
-
-.PHONY : Avl.s
-
-# target to generate assembly for a file
-Avl.cpp.s:
-	$(MAKE) -f CMakeFiles\ED2_Proyecto.dir\build.make CMakeFiles/ED2_Proyecto.dir/Avl.cpp.s
-.PHONY : Avl.cpp.s
-
 DataFile.obj: DataFile.cpp.obj
 
 .PHONY : DataFile.obj
@@ -203,33 +176,6 @@ ManejarAvl.cpp.s:
 	$(MAKE) -f CMakeFiles\ED2_Proyecto.dir\build.make CMakeFiles/ED2_Proyecto.dir/ManejarAvl.cpp.s
 .PHONY : ManejarAvl.cpp.s
 
-RegistroRepetidos.obj: RegistroRepetidos.cpp.obj
-
-.PHONY : RegistroRepetidos.obj
-
-# target to build an object file
-RegistroRepetidos.cpp.obj:
-	$(MAKE) -f CMakeFiles\ED2_Proyecto.dir\build.make CMakeFiles/ED2_Proyecto.dir/RegistroRepetidos.cpp.obj
-.PHONY : RegistroRepetidos.cpp.obj
-
-RegistroRepetidos.i: RegistroRepetidos.cpp.i
-
-.PHONY : RegistroRepetidos.i
-
-# target to preprocess a source file
-RegistroRepetidos.cpp.i:
-	$(MAKE) -f CMakeFiles\ED2_Proyecto.dir\build.make CMakeFiles/ED2_Proyecto.dir/RegistroRepetidos.cpp.i
-.PHONY : RegistroRepetidos.cpp.i
-
-RegistroRepetidos.s: RegistroRepetidos.cpp.s
-
-.PHONY : RegistroRepetidos.s
-
-# target to generate assembly for a file
-RegistroRepetidos.cpp.s:
-	$(MAKE) -f CMakeFiles\ED2_Proyecto.dir\build.make CMakeFiles/ED2_Proyecto.dir/RegistroRepetidos.cpp.s
-.PHONY : RegistroRepetidos.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -266,18 +212,12 @@ help:
 	@echo ... edit_cache
 	@echo ... ED2_Proyecto
 	@echo ... rebuild_cache
-	@echo ... Avl.obj
-	@echo ... Avl.i
-	@echo ... Avl.s
 	@echo ... DataFile.obj
 	@echo ... DataFile.i
 	@echo ... DataFile.s
 	@echo ... ManejarAvl.obj
 	@echo ... ManejarAvl.i
 	@echo ... ManejarAvl.s
-	@echo ... RegistroRepetidos.obj
-	@echo ... RegistroRepetidos.i
-	@echo ... RegistroRepetidos.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -16,20 +16,21 @@ int main()
         registroP nuevo;
         cout<<"\n*****Menu Principal*****"<<endl;
         cout<<"\n*****Daniel Medina******"<<endl;
+        cout<<"\n*****Estructura de Datos 2******"<<endl;
 
-        cout<<"1.Insertar Nuevos registros\n2.Busquedas\n3.Eliminar Nodo(Apellido)"<<endl;
+        cout<<"1. Nuevos registros\n2.Busquedas\n3.Eliminar Apellido"<<endl;
         cout<<"4.Imprimir\n5.Salir"<<endl;
-        cout<<"Escriba el numero de su eleccion: ";
+        cout<<"Escoja una opcion: ";
         cin>>opc;
         switch (opc)
         {
             case  1:
-                cout<<"\t1.Insercion Manual\n\t2.Insercion Automatica"<<endl;
-                cout<<"\tEliga su opcion: ";
+                cout<<"1. Manual\n\t2. Automatica"<<endl;
+                cout<<"Eliga su opcion: ";
                 cin>>opc2;
                 if(opc2 == 1)
                 {
-                    cout<<"\t\tA continuacion ingrese lo que se le vaya solicitando: "<<endl;
+                    cout<<"\tIngrese los datos: "<<endl;
                     cout<<"\tid: ";
                     cin>>nuevo.id;
                     cout<<"\tname: ";
@@ -58,23 +59,23 @@ int main()
                 }
                 else if(opc2 == 2)
                 {
-                    cout<<"\tEscriba el nombre del archivo del cual se cargaran los regsitros: ";
+                    cout<<"\tEscriba el nombre del archivo: ";
                     cin>>archivoData;
                     arbol->cargarArbolDe(archivoData);
                 }
                 else
                 {
-                    cout<<"\tLo sentimos esa no es ninguna opcion!!"<<endl;
+                    cout<<"\tEsa no es una opcion!!"<<endl;
                 }
                 break;
             case  2:
-                cout<<"\t1.Buscar Apellido e imprimir nombres\n\t2.Buscar por Apellido y Nombre e Imprimir registros en datab.dat";
-                cout<<"\n\t3.Buscar Registros por Mes y ano e imprimirlos todos"<<endl;
+                cout<<"\t1.Buscar Apellido \n2.Buscar Apellido y el nombre mas Imprimir registros ";
+                cout<<"\n3.Buscar Registros por Mes y anio|imprimirlos todos"<<endl;
                 cout<<"\tEscoja su opcion: ";
                 cin>>opc2;
                 if(opc2 == 1)
                 {
-                    cout<<"\t\tEscriba el apellido que desea buscar e imprimir: ";
+                    cout<<"\t\tEscriba el apellido: ";
                     cin>>lastName;
                     arbol->manager->imprimirConApellido(lastName,arbol->_raiz);
                 }
@@ -86,7 +87,7 @@ int main()
                     cin>>lastName;
                     int pos = arbol->manager->buscar(name,lastName,arbol->_raiz);
                     if(pos == -1)
-                        cout<<"\tNo hay registros que coincidan con ese nombre y apellido"<<endl;
+                        cout<<"\tNo se encuentra ese registro con ese nombre y el apellido"<<endl;
                     else
                     {
                         listaNombre tmp = arbol->manager->getItem(pos);
@@ -99,28 +100,28 @@ int main()
                 {
                     cout<<"\tIngrese el numero del mes a imprimir(1-12) ";
                     cin>>mes;
-                    cout<<"\n\tIngrese el numero del ano a imprimir(yyyy) ";
+                    cout<<"\nIngrese el numero del anio a imprimir ";
                     cin>>year;
                     arbol->imprimirRegistrosMesYear(mes,year);
                 }
                 else
                 {
-                    cout<<"\tLo siento esa no es una opcion valida!!"<<endl;
+                    cout<<"\tVuelva Intentar!!"<<endl;
                 }
                 break;
             case  3:
-                cout<<"\tEscriba el apellido del nodo a eliminar  ";
+                cout<<"\tEscriba para eliminar el apellido del nodo   ";
                 cin>>lastName;
                 arbol->eliminar(lastName);
                 break;
             case  4:
-                cout<<"\t1.Imprimir todo el arbol\n\t2.Imprimir Sub arbol"<<endl;
-                cout<<"\tEscoja su opcion: ";
+                cout<<"\t1.Print arbol\n\t2. Print Sub arbol"<<endl;
+                cout<<"\tEscoja una opcion opcion: ";
                 cin>>opc2;
                 if(opc2 == 1)
                 {
-                    cout<<"\t\t1.Imprimir InOrder\n\t\t2.Imprimir PreOrder\n\t\t3.Imprimir postOrder"<<endl;
-                    cout<<"\t\tEscoja su opcion: ";
+                    cout<<"\t1.InOrder\n\t2.PreOrder\n\t3.postOrder"<<endl;
+                    cout<<"\t\tEscoja una opcion: ";
                     cin>>opc3;
                     if(opc3 == 1)
                         arbol->imprimirInOrder();
@@ -129,7 +130,7 @@ int main()
                     else if(opc3 == 3)
                         arbol->imprimirPosOrder();
                     else
-                        cout<<"\t\tLo siento esa no es una opcion valida!!"<<endl;
+                        cout<<"\t\tVuelva a intentarlo!"<<endl;
 
                 }
                 else if(opc2 == 2 )
@@ -139,8 +140,8 @@ int main()
                     existe = arbol->buscar(lastName);
                     if(existe != -1)
                     {
-                        cout<<"\t\t1.Imprimir InOrder\n\t\t2.Imprimir PreOrder\n\t\t3.Imprimir postOrder"<<endl;
-                        cout<<"\t\tEscoja su opcion: ";
+                        cout<<"\t1. InOrder\n\t2. PreOrder\n\t3. postOrder"<<endl;
+                        cout<<"\tEscoja su opcion: ";
                         cin>>opc3;
                         if(opc3 == 1)
                             arbol->imprimirInOrder(lastName);
@@ -149,16 +150,16 @@ int main()
                         else if(opc3 == 3)
                             arbol->imprimirPosOrder(lastName);
                         else
-                            cout<<"\t\tLo siento esa no es una opcion valida!!"<<endl;
+                            cout<<"\t\tVuelva a intentarlo!"<<endl;
                     }
                     else
                     {
-                        cout<<"\tNo existe ningun apellido que coincida!!"<<endl;
+                        cout<<"\tNo se encuentra ese apellido!!"<<endl;
                     }
                 }
                 else
                 {
-                    cout<<"\tLo siento esa no es una opcion valida!!"<<endl;
+                    cout<<"\tVuelva a intentarlo!!"<<endl;
                 }
                 break;
         }

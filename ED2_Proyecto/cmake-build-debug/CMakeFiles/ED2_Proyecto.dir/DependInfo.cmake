@@ -4,10 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/ultim/CLionProjects/ED2_Proyecto/Avl.cpp" "C:/Users/ultim/CLionProjects/ED2_Proyecto/cmake-build-debug/CMakeFiles/ED2_Proyecto.dir/Avl.cpp.obj"
   "C:/Users/ultim/CLionProjects/ED2_Proyecto/DataFile.cpp" "C:/Users/ultim/CLionProjects/ED2_Proyecto/cmake-build-debug/CMakeFiles/ED2_Proyecto.dir/DataFile.cpp.obj"
   "C:/Users/ultim/CLionProjects/ED2_Proyecto/ManejarAvl.cpp" "C:/Users/ultim/CLionProjects/ED2_Proyecto/cmake-build-debug/CMakeFiles/ED2_Proyecto.dir/ManejarAvl.cpp.obj"
-  "C:/Users/ultim/CLionProjects/ED2_Proyecto/RegistroRepetidos.cpp" "C:/Users/ultim/CLionProjects/ED2_Proyecto/cmake-build-debug/CMakeFiles/ED2_Proyecto.dir/RegistroRepetidos.cpp.obj"
   "C:/Users/ultim/CLionProjects/ED2_Proyecto/main.cpp" "C:/Users/ultim/CLionProjects/ED2_Proyecto/cmake-build-debug/CMakeFiles/ED2_Proyecto.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

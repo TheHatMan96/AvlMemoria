@@ -13,9 +13,10 @@ void DataFile::open()
 {
 
     tmp = new ofstream(tmp,ios::in | ios::out|ios::binary);
-    if(!tmp->is_open()){
+    //tmp->open(dir);/*
+    /*if(!tmp->is_open()){
         tmp->open(dir);
-    }
+    }*/
 }
 
 void DataFile::close()
@@ -26,8 +27,8 @@ void DataFile::close()
 void DataFile::write(char *i,int pos,int b)
 {
     ofstream out(this->dir,ios::binary);
-     fstream f(dir);
-    f.seekg(pos);
+    ofstream f(dir);
+    f.seekp(pos);
     f.write(i,b);
 }
 
@@ -48,7 +49,7 @@ char* DataFile::read(int pos, int b)
 
 int DataFile::getEndingPos()()
 {
-    ifstream in(dir,ios::in | ios::binary);
-    in.seekg(0,ios::end);
-    return in.tellg();
+    ofstream in(dir,ios::in | ios::binary);
+    in.seekp(0,ios::end);
+    return in.tellp();
 }

@@ -5,8 +5,6 @@
 #ifndef ED2_PROYECTO_AVL_H
 #define ED2_PROYECTO_AVL_H
 #include "structs.h"
-//#include "manager.h"
-
 
 #include "structs.h"
 #include "ManejarAvl.h"
@@ -69,7 +67,6 @@ public:
     }
     registroArbol getRegistroArbol(DataFile file, int pos)
     {
-        //debo hacer esta funcion
         registroArbol retorno;
         int posPuntero =  4 + (pos*sizeof(registroArbol));
         memcpy(retorno.lastName,file.read(posPuntero,sizeof(retorno.lastName)),sizeof(retorno.lastName));
@@ -113,7 +110,6 @@ public:
         delete[] fileName;
         registroP retorno;
         int posPuntero =  pos*sizeof(registroP);
-        // retorno.id = charToInt(file.leer(posPuntero,sizeof(int)));
         memcpy(&retorno.id,filee.read(posPuntero,sizeof(int)),sizeof(int));
         posPuntero+=sizeof(int);
         memcpy(retorno.name,filee.read(posPuntero,sizeof(retorno.name)),sizeof(retorno.name));
@@ -124,13 +120,10 @@ public:
         posPuntero+= sizeof(retorno.credit_card);
         memcpy(retorno.date,filee.read(posPuntero,sizeof(retorno.date)),sizeof(retorno.date));
         posPuntero+= sizeof(retorno.date) +1;
-        // retorno.day = charToInt(file.leer(posPuntero,sizeof(short int)));
         memcpy(&retorno.day,filee.read(posPuntero,sizeof(short int)),sizeof(short int));
         posPuntero+=sizeof(short int);
-        // retorno.month = charToInt(file.leer(posPuntero,sizeof(short int)));
         memcpy(&retorno.month,filee.read(posPuntero,sizeof(short int)),sizeof(short int));
         posPuntero+=sizeof(short int);
-        // retorno.year = charToInt(file.leer(posPuntero,sizeof(short int)));
         memcpy(&retorno.year,filee.read(posPuntero,sizeof(short int)),sizeof(short int));
         posPuntero+=sizeof(short int);
         memcpy(retorno.payment_type,filee.read(posPuntero,sizeof(retorno.payment_type)),sizeof(retorno.payment_type));
@@ -144,7 +137,6 @@ public:
         return retorno;
 
     }
-    //esta funcion lo debe agregar al datab.dat y al arbol
     void agregarNuevoRegistro(registroP nuevo)
     {
         char* arch = new char[sizeof("datab.dat")];
@@ -265,7 +257,6 @@ public:
             strcpy(arch,nameArchivo.c_str());
             DataFile fileRegistros(arch);
             int cantRegistros = fileRegistros.getEndingPos()/sizeof(registroP);
-            //tiene 605,000 Registros este archivo
             structs* nuevo;
             int repes = 0;
             delete[] arch;
@@ -324,11 +315,7 @@ private:
         _raiz = new structs(raiz.lastName);
         cargarHijos(raiz,&_raiz);
     }
-    // bool existFile(const char *fileName)
-    // {
-    //     ifstream infile(fileName);
-    //     return infile.good();
-    // }
+
     structs* minNode(structs* sr)
     {
         structs* curr = sr;
@@ -693,7 +680,6 @@ private:
         while(posPuntero <= posFinal)
         {
             char* lastName = file.read(posPuntero,30);
-            // memcpy(lastName,file.leer(posPuntero,30),30);
             if(strcmp(lastName,last) == 0)
             {
                 delete[] lastName;
@@ -710,4 +696,4 @@ private:
 
 
 
-#endif //ED2_PROYECTO_AVL_H
+
